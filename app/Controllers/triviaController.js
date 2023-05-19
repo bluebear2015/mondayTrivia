@@ -20,7 +20,6 @@ export class triviaController{
 constructor(){ 
     this.GetQuestions()
     appState.on('triviaQuestion', DrawTriviaQuestions)
- appState.on('correctAnswer',this.gameRules)
     // appState.on("questions", this.gameRules)
     console.log('triviaController');
     DrawTriviaQuestions();
@@ -33,5 +32,21 @@ async GetQuestions(){
     }
     
 }
-    
+
+checkanswer(answer){
+    if(answer == appState.triviaQuestion.correct_answer)
 }
+
+
+}
+// gameRules(){
+//     let question = triviaQuestion
+//     let correct = 
+//     answers.forEach(p => {
+//         if (answers == correct){
+//             alert("ANSWER CORRECT")
+//         } 
+//         else( )
+//     });
+// }    
+
